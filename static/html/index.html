@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Marmelad&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../../dist/index.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <button class="add-btn" onclick="addListElement()">
+        Назначить менеджера
+    </button>
+    <p>Работа с юрлицами</p>
+    <button class="add-btn" onclick="createProfile()">
+        Добавить профиль
+    </button>
+</header>
+<div class="modal hidden">
+    <div class="modal-window">
+        <div class="content"></div>
+        <div class="modal-buttons">
+            <img src="../assets/cancel.png" alt="Cancel" onclick="toggleModal()">
+        </div>
+    </div>
+</div>
+<main>
+    <ul class="cards-list">
+        <li class="add-buttons">
+        </li>
+    </ul>
+</main>
+<script>
+    init();
+</script>
+</body>
+</html>

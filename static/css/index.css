@@ -1,0 +1,277 @@
+:root {
+    --tm-app-font-family: 'Geologica';
+    --tm-app-header-font-size: clamp(16px, 3vw, 48px);
+    --tm-app-tasklist-font-size-large: clamp(12px, 1.6vw, 36px);
+    --tm-app-tasklist-font-size-medium: clamp(10px, 1.25vw, 28px);
+}
+
+:root {
+    --tm-app-background: #d7e3fc;
+    --tm-app-card-background: #E9E9E9;
+    --tm-app-card-color-1: #F5F5F5;
+    --tm-app-card-color-2: #A2CDD9;
+    --tm-app-card-color-3: #ECF0F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--tm-app-font-family), sans-serif;
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    width: 1rem;
+}
+
+button {
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    border: none;
+    background: inherit;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+    height: 12vh;
+    font-size: var(--tm-app-header-font-size);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    padding: 2%;
+}
+
+.cards-list {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 3vh;
+    column-gap: calc((100vw - 440px*3)/3);
+}
+
+.card {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    padding: 8px;
+    width: 440px;
+    border-radius: 1rem;
+    background-color: var(--tm-app-card-background);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.4);
+}
+
+.main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+
+    img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-between;
+    background-color: var(--tm-app-card-color-2);
+    padding: 8px;
+    border-radius: 1rem;
+
+    .inp {
+        display: none;
+    }
+}
+
+.title {
+    font-weight: 600;
+
+    label {
+        font-weight: 600;
+    }
+}
+
+.list-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.list-client {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: var(--tm-app-card-color-2);
+    padding: 8px 8px;
+    margin-top: 8px;
+    gap: 0.5rem;
+
+    & > div {
+        display: flex;
+        gap: 0.25rem;
+    }
+
+    .inp {
+        display: none;
+    }
+}
+
+.client-buttons {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.add-card-btn {
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    background-color: var(--tm-app-card-color-2);
+    padding: 8px;
+    border-radius: 1rem;
+    align-self: center;
+}
+
+.edit-info-btn {
+    border: none;
+    font-size: 16px;
+    width: 80%;
+    background-color: var(--tm-app-card-color-3);
+    padding: 8px;
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    align-self: center;
+}
+
+.delete-card-btn {
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+.add-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.add-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    width: 440px;
+    border-radius: 1rem;
+    background-color: var(--tm-app-card-background);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    font-size: 20px;
+}
+
+.modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-window {
+    background-color: var(--tm-app-card-background);
+    height: fit-content;
+    border-radius: 1rem;
+    padding: 8px;
+}
+
+.content {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    width: 440px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    margin-top: 8px;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+.editable {
+    p:not(.title) {
+        display: none;
+    }
+
+    .inp {
+        display: unset;
+    }
+
+    .not-editable {
+        display: none;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+

@@ -1,0 +1,26 @@
+{
+  "name": "port",
+  "version": "1.0.0",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "tsc-watch --onSuccess \"ts-node dist/main.js\"",
+    "start": "ts-node dist/main.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/pg": "^8.11.10",
+    "@types/node": "^22.10.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.13.1",
+    "tsc-watch": "^6.2.1"
+  }
+}
